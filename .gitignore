@@ -1,0 +1,28 @@
+# App caches/state (do not sync)
+/Code - OSS/
+/Code/*
+!/Code/User/
+/Code/User/*
+!/Code/User/settings.json
+!/Code/User/keybindings.json
+!/Code/User/snippets/
+!/Code/User/snippets/**
+/vesktop/
+/spotify/
+/WowUp/
+/pulse/
+/go/telemetry/
+/session/
+/simple-update-notifier/
+/OpenRGB/logs/
+/quickshell/.qmlls.ini
+/wallpaper/material.json.tmp
+/wallpaper/wallbag.txt
+/wallpaper/wallpath.txt
+/wallpaper/~
+/systemd/user/*.wants/
+/systemd/user/pipewire-session-manager.service
+/gtk-3.0/
+/yay/
+/kitty/kitty.conf.bak
+/dconf/user

@@ -1,0 +1,10 @@
+Finish bar - SysInfo,SysTray
+nvim config
+Dunst theme
+Clipboard Managment
+App launcher and theme
+Hyprshot keybinds
+Hyprpolkitagent theme
+Hyprcursor
+Vesktop theme
+

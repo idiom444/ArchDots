@@ -1,0 +1,10 @@
+[StreamInputs]
+inputDevice=alsa_input.pci-0000_80_1f.3.analog-stereo
+
+[StreamOutputs]
+outputDevice=alsa_output.pci-0000_80_1f.3.analog-stereo
+visiblePage=pluginsPage
+
+[Window]
+height=464
+width=781
