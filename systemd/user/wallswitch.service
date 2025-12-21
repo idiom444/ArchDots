@@ -1,9 +1,0 @@
-[Unit]
-Description=Rotate wallpaper + regenerate matugen theme
-
-[Service]
-Type=oneshot
-Environment=WALL_DIR_ENV=/home/Idiom/Pictures/Walls
-Environment=WALL_STATE_DIR_ENV=/home/Idiom/.config/wallpaper
-ExecStart=/home/Idiom/.config/wallpaper/newwall.sh
-

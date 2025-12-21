@@ -238,6 +238,13 @@ Singleton {
         }
     }
 
+    FileView {
+        id: hyprFile
+        path: "/home/Idiom/.config/hypr/hyprland.conf"
+        watchChanges: true
+        onFileChanged: this.reload()
+    }
+
     // reactive derived values (updates automatically when file reloads)
     property bool useDark: j.is_dark_mode || (j.mode === "dark")
 
@@ -248,6 +255,26 @@ Singleton {
         var value = useDark ? colorObj.dark : colorObj.light
         return value || fallback
     }
+
+    function pickHyprOpacity(content, fallback) {
+        if (!content) {
+            return fallback
+        }
+        var match = content.match(/^\s*\$activeOpacity\s*=\s*([0-9]*\.?[0-9]+)/m)
+        if (!match) {
+            match = content.match(/^\s*active_opacity\s*=\s*([0-9]*\.?[0-9]+)/m)
+        }
+        if (match && match[1]) {
+            var value = Number(match[1])
+            if (!isNaN(value)) {
+                return Math.max(0, Math.min(1, value))
+            }
+        }
+        return fallback
+    }
+
+    property string hyprText: hyprFile.text()
+    property real barOpacity: pickHyprOpacity(hyprText, 1.0)
 
     property color bg2: pickColor(j.colors.surface_container, bg)
     property color fg2: pickColor(j.colors.on_surface, fg)

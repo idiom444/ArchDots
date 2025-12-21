@@ -21,7 +21,12 @@ Scope {
             Rectangle {
                 anchors.fill: parent
                 radius: 20
-                color: Qt.rgba(Libs.Theme.surface_dim.r, Libs.Theme.surface_dim.g, Libs.Theme.surface_dim.b, 0.6)
+                color: Qt.rgba(
+                    Libs.Theme.barBg.r,
+                    Libs.Theme.barBg.g,
+                    Libs.Theme.barBg.b,
+                    Libs.Theme.barBg.a * Libs.Theme.barOpacity
+                )
                 WSWidget.WorkspaceWidget{
                     id: wsChild
                     screen: modelData 

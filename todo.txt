@@ -1,10 +1,14 @@
-Finish bar - SysInfo,SysTray
-nvim config
-Dunst theme
-Clipboard Managment
-App launcher and theme
-Hyprshot keybinds
-Hyprpolkitagent theme
-Hyprcursor
-Vesktop theme
+learn to use nvim and dictch ms garbage and also rice
 
+not allowed to continue until above is complete
+
+QuickShell Widgets/Modules:
+    -Finish bar - SysInfo,SysTray,Media-display - make clickable
+    -Clipboard Managment
+    -App launcher
+    -blur and transparency control panel
+
+Dunst theme
+expand Hyprshot keybinds
+Hyprpolkitagent theme/settings
+Hyprcursor theme/cursors

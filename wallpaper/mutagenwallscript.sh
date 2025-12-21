@@ -62,3 +62,10 @@ if [[ -x "$VSCODE_SCRIPT" ]]; then
 else
   echo "Warning: missing or non-executable sync script: $VSCODE_SCRIPT" >&2
 fi
+
+VESKTOP_SCRIPT="$OUT_DIR/vesktop-quickcss-sync.sh"
+if [[ -x "$VESKTOP_SCRIPT" ]]; then
+  "$VESKTOP_SCRIPT" "$OUT"
+else
+  echo "Warning: missing or non-executable sync script: $VESKTOP_SCRIPT" >&2
+fi
