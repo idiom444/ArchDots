@@ -4,8 +4,19 @@ set -euo pipefail
 export PATH="/usr/local/bin:/usr/bin:/bin:${PATH:-}"
 
 #DIR VARS
-WALL_DIR="${WALL_DIR_ENV:?WALL_DIR_ENV is not set}"
-WALL_STATE_DIR="${WALL_STATE_DIR_ENV:?WALL_STATE_DIR_ENV is not set}"
+expand_path() {
+  local path="$1"
+  if [[ "$path" == "~" ]]; then
+    printf '%s\n' "$HOME"
+  elif [[ "$path" == "~/"* ]]; then
+    printf '%s\n' "$HOME/${path#~/}"
+  else
+    printf '%s\n' "$path"
+  fi
+}
+
+WALL_DIR="$(expand_path "${WALL_DIR_ENV:-$HOME/Pictures/Walls}")"
+WALL_STATE_DIR="$(expand_path "${WALL_STATE_DIR_ENV:-$HOME/.config/wallpaper}")"
 MATUGEN_SCRIPT="${WALL_STATE_DIR}/mutagenwallscript.sh"
 BAG_FILE="${WALL_STATE_DIR}/wallbag.txt"
 WALL_PATH_FILE="${WALL_STATE_DIR}/wallpath.txt"

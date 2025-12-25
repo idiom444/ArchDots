@@ -14,7 +14,8 @@
 /go/telemetry/
 /session/
 /simple-update-notifier/
-/OpenRGB/logs/
+/OpenRGB/
+/CurseForge/
 /quickshell/.qmlls.ini
 /wallpaper/material.json.tmp
 /wallpaper/wallbag.txt
@@ -26,3 +27,8 @@
 /yay/
 /kitty/kitty.conf.bak
 /dconf/user
+wallpaper/newwall.sh
+baloofileinformationrc
+pavucontrol.ini
+/ow-electron/
+/WowUpCf/

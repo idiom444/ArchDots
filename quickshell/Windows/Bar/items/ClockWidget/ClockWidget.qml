@@ -9,8 +9,8 @@ WrapperRectangle {
     color: Libs.Theme.primary_container
     Text {
         color: Libs.Theme.on_primary_container
-	    text: Time.time
-	    font: Libs.Theme.uiFont
+        text: Time.time
+        font: Libs.Theme.uiFont
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
     }

@@ -1,7 +1,3 @@
-learn to use nvim and dictch ms garbage and also rice
-
-not allowed to continue until above is complete
-
 QuickShell Widgets/Modules:
     -Finish bar - SysInfo,SysTray,Media-display - make clickable
     -Clipboard Managment
